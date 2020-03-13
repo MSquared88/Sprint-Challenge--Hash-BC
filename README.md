@@ -23,12 +23,41 @@ This sprint challenge is divided up into three parts:  Hash tables coding, block
 ## Interview Questions
 
 Explain in detail the workings of a dynamic array:
+
+A dynamic array is an array of set size that when filled to the max will double in size.
+
 * What is the runtime complexity to access an array, add or remove from the front, and add or remove from the back?
+
+when acessing a item and you know the index you need it is O(1)
+
+when searching for an item in a array it is O(n)
+
+adding or removing to the front is O(n) since we have to shift the rest of the array over one or left one if removing
+
+removing from the end is O(1) since we can just take the length of the array and make the end = None
+
+adding to the end of an array is either O(1) if the size of the array is more then the contents 
+otherwise we need to double the size and copy over the array which is O(n) n being the number of items.
+
 * What is the worse case scenario if you try to extend the storage size of a dynamic array?
+O(n)
 
 Explain how a blockchain is structured. What are the blocks, what is the chain? How is the data organized?
- 
+
+blockchain is a secure way to have a ledger of transactions without outside authorities
+It taked a way trust and inserts proof.
+
+Blocks are just nodes of information.
+
+The chain is all the nodes that are connected to each other by encryption.
+
 Explain how proof of work functions. How does it operate. How does this protect the chain from attack. What kind of attack is possible?
+
+A proof of work is a arbitrary problem that must be solved before the next block with the transactions can be created.
+
+It protects the chain by making it hard to counterfeit a block in the chain. The harder the POW is to solve the harder it is to break the chain.
+
+A attack is possible if one entity could out work more than 50% of all the other entities trying to solve the POW they could modify a block and compromise the chain.
 
 ## Project Set Up
 
